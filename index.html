@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="css/main.css" />
   </head>
   <body>
-    <nav id='nav'>
+    <header id='top'>
       <div class="center">
         <h1>CSS Demos</h1>
         <p>by Adam Jubert</p>
@@ -18,13 +18,29 @@
         <a target="_blank" href=""><i class="fa fa-envelope" aria-hidden="true"></i></a>
       </div>
 
-    </nav>
+    </header>
 
     <section class='center'>
+      <h3>Jump To...</h3>
+      <nav>
+        <ul>
+          <li><a href="#rotate-scale">Rotate & Scale</a></li>
+          <li><a href="#translate">Translate</a></li>
+          <li><a href="#dropdown">Dropdown Menu</a></li>
+          <li><a href="#"></a></li>
+        </ul>
+
+      </nav>
+
+
+    </section>
+
+
+    <section class='center' id='rotate-scale'>
       <h3>Rotate & Scale</h3>
       <div class='example'>
 
-        <div class='square rotate trans'></div>
+        <div class='triangle rotate trans'></div>
 
       </div>
       <div class='toggle-code'>
@@ -37,13 +53,14 @@
     </section>
 
     <!-- Translate -->
-    <section class='center'>
+    <section class='center' id='translate'>
       <h3>Translate</h3>
       <div class='example'>
         <div class='flex translate-box'>
-                <div class='sliding-square translate-l trans'></div>
-                <div class='growing-rect trans'></div>
-                <div class='sliding-square translate-r trans'></div>
+          <div class="tri-top-left">  </div>
+          <div class="tri-top-right">  </div>
+          <div class="tri-btm-left">  </div>
+          <div class="tri-btm-right">  </div>
         </div>
       </div>
       <div class='toggle-code'>
@@ -55,10 +72,10 @@
     </section>
 
     <!-- Drop Down Menu -->
-    <section>
+    <section id='dropdown'>
 
       <h3>Drop-Down Menu</h3>
-      <div class='example'>
+      <div class='example ex-dd'>
         <div class='dropdown'>
           <a>View Menu <i class="fa fa-caret-down" aria-hidden="true" /></i></a>
           <ul>
@@ -67,7 +84,8 @@
             <li><a>Link Two</a></li>
             <li><a>Link Three</a></li>
           </ul>
-        </div>
+        </div><br><br>
+        <p>...content will be covered</p>
       </div>
       <div class='toggle-code'>
         <a class='btn'>View Code</a>
@@ -77,28 +95,10 @@
       </div>
 
     </section>
-    <section>
 
-      <h3>Title</h3>
-      <div class='example'>
-        <div id="logo">
-          <div id="cube">
-            <div id='front'>Front</div>
-            <div id='back'>Back</div>
-          </div>
-        </div>
-      </div>
-      <div class='toggle-code'>
-        <a class='btn'>View Code</a>
-        <div class="code-snip">
-          Hidden unless hovered
-        </div>
-      </div>
-
-    </section>
 
     <footer>
-      <a href="#nav">Return to Top</a>
+      <a href="#top">Return to Top</a>
     </footer>
 
   </body>

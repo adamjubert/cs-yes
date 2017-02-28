@@ -10,16 +10,16 @@
   color: #EEAA7B;
 }
 
-nav {
+header {
   background-color: #07889B;
   padding: 50px 0;
 }
 
-body > section:nth-child(even) {
+body > section:nth-child(odd) {
   background-color: #66B9BF;
 }
 
-body > section:nth-child(odd) {
+body > section:nth-child(even) {
   background-color: #96D6DC;
 }
 
@@ -29,18 +29,34 @@ h1 {
 
 h3 {
   font-size: 36px;
+  margin-bottom: 36px;
 }
 
-nav .fa {
+header .fa {
   font-size: 42px;
   margin: 18px 18px 0;
   transition: 0.5s;
   color: white;
 }
 
-nav .fa:hover {
+header .fa:hover {
   color: #EEAA7B;
   transition: 0.5s;
+}
+
+nav li {
+  font-size: 20px;
+  margin: 12px 0;
+}
+
+nav a {
+  text-decoration: none;
+    transition: 0.8s;
+}
+
+nav a:hover {
+  color: #07889B;
+  transition: 0.8s;
 }
 
 .center {
@@ -49,7 +65,6 @@ nav .fa:hover {
 
 section {
   min-height: 400px;
-
   text-align: center;
   padding: 50px 0;
 }
@@ -62,7 +77,7 @@ section {
 
 .toggle-code {
   display: block;
-  margin: 12px auto;
+  margin: 150px auto 12px;
   width: 300px;
 }
 
@@ -124,41 +139,75 @@ Example elements
 
 }
 
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 100px solid #E37222;
+  margin: 0 auto;
+}
+
+.triangle:hover {
+  cursor: pointer;
+}
+
 /* Rotate & Scale*/
 .rotate:hover {
-  transform: rotate(90deg) scale(1.4);
+  transform: rotate(180deg) scale(1.4);
 }
 
 /* Translate */
 .translate-box {
   margin: 0 auto;
-  width: 60%;
-  display: flex;
-  justify-content: center;
-  border: 1px dashed green;
+  width: 400px;
+  height: 200px;
+  border: 2px dashed #07889B;
+  position: relative;
 }
 
-.growing-rect {
-  width: 20px;
-  height: 100px;
-  background-color: #E37222;
-  margin: 0;
-}
 
 .translate-box:hover {
   cursor: pointer;
 }
 
-.translate-box:hover .growing-rect {
-  width: 100px;
+.translate-box > div {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  transition: 2s;
+  background-color: #E37222;
 }
 
-.translate-box:hover .translate-l {
-  transform: translateX(-63px);
+.tri-top-right {
+  right: 0px;
 }
-.translate-box:hover .translate-r {
-  transform: translateX(62px);
+
+.tri-btm-left {
+  bottom: 0px;
 }
+.tri-btm-right {
+  bottom: 0px;
+  right: 0px;
+}
+
+.translate-box:hover > div {
+  transition: 2s;
+}
+
+.translate-box:hover .tri-top-left {
+  transform: translateY(170px);
+}
+.translate-box:hover .tri-top-right {
+  transform: translateX(-370px);
+}
+.translate-box:hover .tri-btm-left {
+  transform: translateX(370px);
+}
+.translate-box:hover .tri-btm-right {
+  transform: translateY(-170px);
+}
+
 
 .sliding-square {
   width: 100px;
@@ -168,6 +217,17 @@ Example elements
 }
 
 /* Dropdown */
+.ex-dd {
+  border: 2px dashed #07889B;
+  border-radius: 8px;
+  height: 200px;;
+  width: 200px;
+}
+
+.dropdown {
+  width: 140px;
+  margin: 0 auto;
+}
 .dropdown > a {
   padding: 10px;
   cursor: pointer;
@@ -202,43 +262,4 @@ Example elements
 .dropdown ul li:hover {
   cursor: pointer;
   text-decoration: underline;
-}
-
-
-#logo { perspective: 800px; }
-#cube, #front, #back { height: 120px; width: 120px; }
-
-#cube {
-  display: block;
-  position: relative;
-  margin: 30px auto;
-  background: rgba(0, 0, 80, 0.5);
-  background-blend-mode: luminosity;
-  text-decoration: none;
-  transform: rotate(0, 0, 0);
-  transform-style: preserve-3d;
-  animation: animate-y 5s infinite linear;
-}
-
-@keyframes animate-y {
-  0% { transform: rotateY(0); }
-  100% { transform: rotateY(360deg); }
-}
-
-#front, #back {
-  position: absolute;
-  backface-visibility: visible;
-}
-
-#front {
-  transform: translateZ(50px);
-  background-color: red;
-  width: 100px;
-  height: 100px;
- }
-#back {
-  transform: rotateY(180deg) translateZ(50px);
-  background-color: orange;
-  width: 100px;
-  height: 100px;
 }
