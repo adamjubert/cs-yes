@@ -51,12 +51,12 @@ nav li {
 
 nav a {
   text-decoration: none;
-    transition: 0.8s;
+    transition: 0.6s;
 }
 
 nav a:hover {
   color: #07889B;
-  transition: 0.8s;
+  transition: 0.6s;
 }
 
 .center {
@@ -70,9 +70,7 @@ section {
 }
 
 .example {
-  width: 50%;
   margin: 0 auto;
-  padding: 40px
 }
 
 .toggle-code {
@@ -160,7 +158,7 @@ Example elements
 /* Translate */
 .translate-box {
   margin: 0 auto;
-  width: 400px;
+  width: 340px;
   height: 200px;
   border: 2px dashed #07889B;
   position: relative;
@@ -199,10 +197,10 @@ Example elements
   transform: translateY(170px);
 }
 .translate-box:hover .tri-top-right {
-  transform: translateX(-370px);
+  transform: translateX(-310px);
 }
 .translate-box:hover .tri-btm-left {
-  transform: translateX(370px);
+  transform: translateX(310px);
 }
 .translate-box:hover .tri-btm-right {
   transform: translateY(-170px);
@@ -227,11 +225,13 @@ Example elements
 .dropdown {
   width: 140px;
   margin: 0 auto;
+  padding: 20px;
 }
 .dropdown > a {
   padding: 10px;
   cursor: pointer;
   font-size: 18px;
+
 }
 
 .dropdown i {
@@ -262,4 +262,109 @@ Example elements
 .dropdown ul li:hover {
   cursor: pointer;
   text-decoration: underline;
+}
+
+/* Flexbox */
+
+#flexbox {
+    text-align: none;
+}
+
+#flexbox > h4 {
+  margin-bottom: 8px;
+  font-size: 20px;
+
+}
+
+
+.flex-box {
+  margin: 0 auto 120px;
+  padding: 20px;
+  width: 80%;
+  border: 3px dashed #07889B;
+  border-radius: 8px;
+}
+
+
+.space-bt {
+  justify-content: space-between;
+}
+
+.space-ar {
+  justify-content: space-around;
+}
+
+.flex-center {
+  justify-content: center;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+
+.flex-start {
+  justify-content: flex-start;
+}
+
+/* Z-Index */
+.z-container {
+  margin: 0 auto;
+  width: 300px;
+  height: 300px;
+  border: 1px solid black;
+  position: relative;
+}
+
+.z-one, .z-two, .z-three, .z-four {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
+
+.z-one {
+  background-color: lightblue;
+  border: 5px solid blue;
+  z-index: 20;
+}
+.z-two {
+  background-color: lightgreen;
+  border: 5px solid green;
+  left: 10px;
+  top: 30px;
+  z-index: 10;
+}
+.z-three {
+  background-color: lightyellow;
+  border: 5px solid yellow;
+  left: 40px;
+  top: 40px;
+  z-index; 15;
+}
+.z-four {
+  background-color: pink;
+  border: 5px solid red;
+  left: 50px;
+  z-index: 19;
+}
+
+
+@keyframes fade {
+  0%   { opacity: 0; }
+  50%  { opacity: 0.8; }
+  100% { opacity: 0; }
+}
+
+#snow {
+  margin: 0 auto;
+}
+
+#snow li {
+  animation-name: fade;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+#snow ul {
+  display: flex;
+  justify-content: center;
 }

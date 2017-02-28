@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>CSS Demos | Adam Jubert</title>
+    <script type="text/javascript" src="js/jquery.min.js">
+    <script src="js/script.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
     <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
@@ -27,7 +29,7 @@
           <li><a href="#rotate-scale">Rotate & Scale</a></li>
           <li><a href="#translate">Translate</a></li>
           <li><a href="#dropdown">Dropdown Menu</a></li>
-          <li><a href="#"></a></li>
+          <li><a href="#flexbox">Flexbox</a></li>
         </ul>
 
       </nav>
@@ -56,7 +58,7 @@
     <section class='center' id='translate'>
       <h3>Translate</h3>
       <div class='example'>
-        <div class='flex translate-box'>
+        <div class='translate-box'>
           <div class="tri-top-left">  </div>
           <div class="tri-top-right">  </div>
           <div class="tri-btm-left">  </div>
@@ -96,6 +98,125 @@
 
     </section>
 
+    <section id='keyframes'>
+
+      <h3>Keyframe Animations</h3>
+      <div class='example'>
+        <div id="snow" class="snow">
+          <ul>
+            <li>❅</li>
+            <li>❅</li>
+            <li>❅</li>
+            <li>❅</li>
+          </ul>
+          <ul>
+            <li>❅</li>
+            <li>❅</li>
+            <li>❅</li>
+            <li>❅</li>
+          </ul>
+          <ul>
+            <li>❅</li>
+            <li>❅</li>
+            <li>❅</li>
+            <li>❅</li>
+          </ul>
+        </div>
+      </div>
+      <div class='toggle-code'>
+        <a class='btn'>View Code</a>
+        <div class="code-snip">
+          Hidden unless hovered
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- Z-Index -->
+    <section id='z-index'>
+
+      <h3>Z-Index</h3>
+      <div class='example'>
+
+        <div class='z-container'>
+          <div class='z-one'>
+            <div class="z-two"></div>
+            <div class='z-three'></div>
+          </div>
+          <div class='z-four'></div>
+        </div>
+
+      </div>
+      <div class='toggle-code'>
+        <a class='btn'>View Code</a>
+        <div class="code-snip">
+          Hidden unless hovered
+        </div>
+      </div>
+
+    </section>
+
+    <!-- FlexBox -->
+    <section id='flexbox'>
+
+      <h3>Flexbox</h3>
+
+      <h4>No Flex</h4>
+      <div class='flex-box'>
+        <ul>
+          <li>Item One</li>
+          <li>Item Two</li>
+          <li>Item Three</li>
+        </ul>
+      </div>
+
+      <h4>Space Between</h4>
+      <div class='flex-box'>
+        <ul class='flex space-bt'>
+          <li>Item One</li>
+          <li>Item Two</li>
+          <li>Item Three</li>
+        </ul>
+      </div>
+
+      <h4>Space Around</h4>
+      <div class='flex-box'>
+        <ul class='flex space-ar'>
+          <li>Item One</li>
+          <li>Item Two</li>
+          <li>Item Three</li>
+        </ul>
+      </div>
+
+      <h4>Center</h4>
+      <div class='flex-box'>
+        <ul class='flex flex-center'>
+          <li>Item One</li>
+          <li>Item Two</li>
+          <li>Item Three</li>
+        </ul>
+      </div>
+
+      <h4>Flex Start</h4>
+      <div class='flex-box'>
+        <ul class='flex flex-start'>
+          <li>Item One</li>
+          <li>Item Two</li>
+          <li>Item Three</li>
+        </ul>
+      </div>
+
+      <h4>Flex End</h4>
+      <div class='flex-box'>
+        <ul class='flex flex-end'>
+          <li>Item One</li>
+          <li>Item Two</li>
+          <li>Item Three</li>
+        </ul>
+      </div>
+
+    </section>
 
     <footer>
       <a href="#top">Return to Top</a>
