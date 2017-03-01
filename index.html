@@ -2,9 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>CSS Demos | Adam Jubert</title>
-    <script type="text/javascript" src="js/jquery.min.js">
-    <script src="js/script.js"></script>
+    <title>CSS Demo | Adam Jubert</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
     <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
@@ -13,11 +11,11 @@
   <body>
     <header id='top'>
       <div class="center">
-        <h1>CSS Demos</h1>
+        <h1>CSS Demo</h1>
         <p>by Adam Jubert</p>
-        <a target="_blank" href="http://github.com/adamjubert"><i class="fa fa-github" aria-hidden="true"></i></a>
-        <a target="_blank" href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-        <a target="_blank" href=""><i class="fa fa-envelope" aria-hidden="true"></i></a>
+        <a target="_blank" href="https://github.com/adamjubert"><i class="fa fa-github" aria-hidden="true"></i></a>
+        <a target="_blank" href="https://linkedin.com/in/adamjubert"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+        <a href="mailto:jubert.adam@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
       </div>
 
     </header>
@@ -26,10 +24,13 @@
       <h3>Jump To...</h3>
       <nav>
         <ul>
-          <li><a href="#rotate-scale">Rotate & Scale</a></li>
-          <li><a href="#translate">Translate</a></li>
           <li><a href="#dropdown">Dropdown Menu</a></li>
+          <li><a href="#keyframe">Keyframe Animations</a></li>
+          <li><a href="#z-index">Z-Index</a></li>
           <li><a href="#flexbox">Flexbox</a></li>
+          <li><a href="#translate">Translate</a></li>
+          <li><a href="#rotate-scale">Rotate & Scale</a></li>
+          <li><a href="#box-model">Box Model</a></li>
         </ul>
 
       </nav>
@@ -37,21 +38,125 @@
 
     </section>
 
+    <!-- Drop Down Menu -->
+    <section id='dropdown'>
+      <h3>Drop-Down Menu</h3>
+      <div class='example ex-dd'>
+        <div class='dropdown'>
+          <a>View Menu <i class="fa fa-caret-down" aria-hidden="true" /></i></a>
+          <ul>
 
-    <section class='center' id='rotate-scale'>
-      <h3>Rotate & Scale</h3>
-      <div class='example'>
-
-        <div class='triangle rotate trans'></div>
-
+            <li><a>Link One</a></li>
+            <li><a>Link Two</a></li>
+            <li><a>Link Three</a></li>
+          </ul>
+        </div><br><br>
+        <p>...content will be covered if you hover over 'View Menu'</p>
       </div>
-      <div class='toggle-code'>
-        <a class='btn'>View Code</a>
-        <div class="code-snip">
-          Hidden unless hovered
+    </section>
+
+    <!--  Keyframes  -->
+    <section id='keyframes'>
+      <h3>Keyframe Animations</h3>
+      <div class='example'>
+        <div id="snow" class="snow">
+          <ul>
+            <li class='spin'>❅</li>
+            <li>spin</li>
+          </ul>
+          <ul>
+            <li class='fade'>❅</li>
+            <li>fade</li>
+          </ul>
+          <ul>
+            <li class='switch'>❅</li>
+            <li>color</li>
+          </ul>
+          <ul>
+            <li class='shrink'>❅</li>
+            <li>spin</li>
+          </ul>
+          <ul>
+            <li class='snow-all'>❅</li>
+            <li>all</li>
+          </ul>
+
         </div>
       </div>
+    </section>
 
+    <!-- Z-Index -->
+    <section id='z-index'>
+      <h3>Z-Index</h3>
+      <div class='example'>
+
+          <div class='z-container'>
+            <div class='z-blue'>z-index: 20
+              <div class="z-green">z-index: 0</div>
+              <div class='z-yellow'>z-index: 5</div>
+            </div>
+            <div class='z-red'>z-index: 19</div>
+          </div>
+
+        </div>
+        <div class="toggle-code">
+          <div class="btn">View HTML</div>
+          <div class="code-snip">
+            <div style="background: #f8f8f8; overflow:auto;width:auto;padding:.2em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008000; font-weight: bold">            &lt;div</span> <span style="color: #7D9029">class=</span><span style="color: #BA2121">&#39;container&#39;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+              <span style="color: #008000; font-weight: bold">&lt;div</span> <span style="color: #7D9029">class=</span><span style="color: #BA2121">&#39;blue&#39;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+                <span style="color: #008000; font-weight: bold">&lt;div</span> <span style="color: #7D9029">class=</span><span style="color: #BA2121">&quot;green&quot;</span><span style="color: #008000; font-weight: bold">&gt;&lt;/div&gt;</span>
+                <span style="color: #008000; font-weight: bold">&lt;div</span> <span style="color: #7D9029">class=</span><span style="color: #BA2121">&#39;yellow&#39;</span><span style="color: #008000; font-weight: bold">&gt;&lt;/div&gt;</span>
+              <span style="color: #008000; font-weight: bold">&lt;/div&gt;</span>
+              <span style="color: #008000; font-weight: bold">&lt;div</span> <span style="color: #7D9029">class=</span><span style="color: #BA2121">&#39;red&#39;</span><span style="color: #008000; font-weight: bold">&gt;&lt;/div&gt;</span>
+            <span style="color: #008000; font-weight: bold">&lt;/div&gt;</span>
+            </pre></div>
+          </div>
+        </div>
+    </section>
+
+    <!-- FlexBox -->
+    <section id='flexbox'>
+
+      <h3>Flexbox</h3>
+
+      <div class='flex-box'>
+        <ul>
+          <li>Displayed block</li>
+          <li>Displayed block</li>
+          <li>Displayed block</li>
+        </ul>
+
+        <ul class='flex flex-item space-bt'>
+          <li>Space Between</li>
+          <li>Space Between</li>
+          <li>Space Between</li>
+        </ul>
+
+        <ul class='flex flex-item space-ar'>
+          <li>Space Around</li>
+          <li>Space Around</li>
+          <li>Space Around</li>
+        </ul>
+
+        <ul class='flex flex-item flex-center'>
+          <li>Centered</li>
+          <li>Centered</li>
+          <li>Centered</li>
+        </ul>
+
+        <ul class='flex flex-item flex-start'>
+          <li>Flex Start</li>
+          <li>Flex Start</li>
+          <li>Flex Start</li>
+        </ul>
+
+        <ul class='flex flex-item flex-end'>
+          <li>Flex End</li>
+          <li>Flex End</li>
+          <li>Flex End</li>
+        </ul>
+
+      </div>
     </section>
 
     <!-- Translate -->
@@ -65,157 +170,34 @@
           <div class="tri-btm-right">  </div>
         </div>
       </div>
-      <div class='toggle-code'>
-        <a class='btn'>View Code</a>
-        <div class="code-snip">
-          Hidden unless hovered
-        </div>
-      </div>
     </section>
 
-    <!-- Drop Down Menu -->
-    <section id='dropdown'>
 
-      <h3>Drop-Down Menu</h3>
-      <div class='example ex-dd'>
-        <div class='dropdown'>
-          <a>View Menu <i class="fa fa-caret-down" aria-hidden="true" /></i></a>
-          <ul>
-
-            <li><a>Link One</a></li>
-            <li><a>Link Two</a></li>
-            <li><a>Link Three</a></li>
-          </ul>
-        </div><br><br>
-        <p>...content will be covered</p>
-      </div>
-      <div class='toggle-code'>
-        <a class='btn'>View Code</a>
-        <div class="code-snip">
-          Hidden unless hovered
-        </div>
-      </div>
-
-    </section>
-
-    <section id='keyframes'>
-
-      <h3>Keyframe Animations</h3>
+    <!-- Rotate & Scale -->
+    <section class='center' id='rotate-scale'>
+      <h3>Rotate & Scale</h3>
       <div class='example'>
-        <div id="snow" class="snow">
-          <ul>
-            <li>❅</li>
-            <li>❅</li>
-            <li>❅</li>
-            <li>❅</li>
-          </ul>
-          <ul>
-            <li>❅</li>
-            <li>❅</li>
-            <li>❅</li>
-            <li>❅</li>
-          </ul>
-          <ul>
-            <li>❅</li>
-            <li>❅</li>
-            <li>❅</li>
-            <li>❅</li>
-          </ul>
-        </div>
+        <div class='triangle rotate trans'></div>
       </div>
-      <div class='toggle-code'>
-        <a class='btn'>View Code</a>
-        <div class="code-snip">
-          Hidden unless hovered
-        </div>
-      </div>
-
     </section>
 
 
-    <!-- Z-Index -->
-    <section id='z-index'>
+    <!-- Box Model -->
+    <section id='box-model'>
 
-      <h3>Z-Index</h3>
-      <div class='example'>
+      <h3>CSS Box Model</h3>
 
-        <div class='z-container'>
-          <div class='z-one'>
-            <div class="z-two"></div>
-            <div class='z-three'></div>
-          </div>
-          <div class='z-four'></div>
-        </div>
-
+      <ul class='flex boxes'>
+        <li>
+          <div class="add-margin">Margin</div>
+        </li>
+        <li>
+          <div class="add-padding">Padding</div>
+        <li>
+          <div class="add-both">Both</div>
+        </li>
+      </ul>
       </div>
-      <div class='toggle-code'>
-        <a class='btn'>View Code</a>
-        <div class="code-snip">
-          Hidden unless hovered
-        </div>
-      </div>
-
-    </section>
-
-    <!-- FlexBox -->
-    <section id='flexbox'>
-
-      <h3>Flexbox</h3>
-
-      <h4>No Flex</h4>
-      <div class='flex-box'>
-        <ul>
-          <li>Item One</li>
-          <li>Item Two</li>
-          <li>Item Three</li>
-        </ul>
-      </div>
-
-      <h4>Space Between</h4>
-      <div class='flex-box'>
-        <ul class='flex space-bt'>
-          <li>Item One</li>
-          <li>Item Two</li>
-          <li>Item Three</li>
-        </ul>
-      </div>
-
-      <h4>Space Around</h4>
-      <div class='flex-box'>
-        <ul class='flex space-ar'>
-          <li>Item One</li>
-          <li>Item Two</li>
-          <li>Item Three</li>
-        </ul>
-      </div>
-
-      <h4>Center</h4>
-      <div class='flex-box'>
-        <ul class='flex flex-center'>
-          <li>Item One</li>
-          <li>Item Two</li>
-          <li>Item Three</li>
-        </ul>
-      </div>
-
-      <h4>Flex Start</h4>
-      <div class='flex-box'>
-        <ul class='flex flex-start'>
-          <li>Item One</li>
-          <li>Item Two</li>
-          <li>Item Three</li>
-        </ul>
-      </div>
-
-      <h4>Flex End</h4>
-      <div class='flex-box'>
-        <ul class='flex flex-end'>
-          <li>Item One</li>
-          <li>Item Two</li>
-          <li>Item Three</li>
-        </ul>
-      </div>
-
     </section>
 
     <footer>
