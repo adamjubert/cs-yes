@@ -29,12 +29,23 @@ body > section:nth-child(even) {
 }
 
 h1 {
-  font-size: 48px;
+  font-size: 68px;
 }
 
 h3 {
   font-size: 36px;
   margin-bottom: 48px;
+}
+
+header p a {
+  text-decoration: none;
+  transition: 0.5s;
+
+}
+
+header p a:hover {
+  color: #7EB8CB;
+  transition: 0.5s;
 }
 
 header .fa {
